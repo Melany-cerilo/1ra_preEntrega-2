@@ -120,7 +120,7 @@ function calcularDescuentov2(cantidadTomos) {
     descuento = 0;
     console.log("El descuento se aplica llevando a partir de 5 tomos");
   } else {
-    console.log("numero de tomo incorrecto");
+    alert("numero de tomo incorrecto");
     return;
   }
 
@@ -158,11 +158,13 @@ function comprarColeccion() {
     );
     if (
       cantidadTomos == null ||
-      (!isNaN(cantidadTomos) && !cantidadTomos.trim().length == 0)
+      (!isNaN(cantidadTomos) &&
+        !cantidadTomos.trim().length == 0 &&
+        cantidadTomos <= 23)
     ) {
       break;
     }
-    alert("Ingresa un número valido");
+    alert("Ingresa un número valido menor o igual a 23");
   }
   if (cantidadTomos != null) {
     tomosElegidos(Number(cantidadTomos));
@@ -171,4 +173,5 @@ function comprarColeccion() {
     }
   }
 }
+
 comprarColeccion();
