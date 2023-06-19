@@ -160,6 +160,7 @@ function comprarColeccion() {
       cantidadTomos == null ||
       (!isNaN(cantidadTomos) &&
         !cantidadTomos.trim().length == 0 &&
+        cantidadTomos > 0 &&
         cantidadTomos <= 23)
     ) {
       break;
