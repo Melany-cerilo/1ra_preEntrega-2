@@ -26,6 +26,7 @@ Si el usuario no confirma la compra, mostrar un mensaje indicando que la compra 
 
  */
 function titulosTomos(numeroTomo) {
+  let tituloTomo;
   switch (Number(numeroTomo)) {
     case 1:
       tituloTomo = "Crueldad";
@@ -110,6 +111,7 @@ function tomosElegidos(cantidadTomos) {
 }
 
 function calcularDescuentov2(cantidadTomos) {
+  let descuento;
   if (Number(cantidadTomos) >= 5 && Number(cantidadTomos) <= 10) {
     descuento = 10;
   } else if (Number(cantidadTomos) > 10 && Number(cantidadTomos) <= 15) {
@@ -124,10 +126,10 @@ function calcularDescuentov2(cantidadTomos) {
     return;
   }
 
-  valorManga = 2000;
-  total = Number(cantidadTomos) * valorManga;
-  importeDescuento = (descuento / 100) * total;
-  totalConDescuento = total - importeDescuento;
+  let valorManga = 2000;
+  let total = Number(cantidadTomos) * valorManga;
+  let importeDescuento = (descuento / 100) * total;
+  let totalConDescuento = total - importeDescuento;
 
   if (descuento > 0) {
     console.log("Se te realizó un descuento del %" + descuento);
@@ -137,7 +139,7 @@ function calcularDescuentov2(cantidadTomos) {
 }
 
 function confirmarCompra() {
-  var resultado = confirm("¿Deseas confirmar tu compra?");
+  let resultado = confirm("¿Deseas confirmar tu compra?");
 
   if (resultado === true) {
     console.log("Tu compra se realizó con exito");
